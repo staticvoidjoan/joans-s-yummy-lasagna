@@ -7,6 +7,7 @@ public class AppFrame extends JFrame implements ActionListener {
     private JButton button;
     private JTextField textField;
     private JTextField textField2;
+
     private int minutesInOven;
     private int numberOfLayers;
 
@@ -27,31 +28,98 @@ public class AppFrame extends JFrame implements ActionListener {
     }
 
     public AppFrame(){
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setTitle("Joan's Yummy Lasagna");
-        this.setLayout(new FlowLayout());
-        this.setPreferredSize(new Dimension(450,250));
-        button = new JButton("Submit");
+//        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//        this.setTitle("Joan's Yummy Lasagna");
+//        this.setLayout(new FlowLayout());
+//        this.setPreferredSize(new Dimension(450,250));
+//        button = new JButton("Submit");
+//        button.addActionListener(this);
+//
+//        JLabel minutesLabel = new JLabel("How many minutes has the lasagna been in the oven");
+//        textField = new JTextField();
+//        textField.setPreferredSize(new Dimension(100,40));
+//        JLabel layerLabel = new JLabel("How many layers are in the lasagna");
+//        textField2 = new JTextField();
+//        textField2.setPreferredSize((new Dimension(100,40)));
+//
+//
+//
+//
+//        this.add(minutesLabel);
+//        this.add(textField);
+//        this.add(layerLabel);
+//        this.add(textField2);
+//        this.add(button);
+//        this.pack();
+//        this.setLocationRelativeTo(null);
+//        this.setVisible(true);
+        JLabel jLabel1 = new javax.swing.JLabel();
+        JLabel jLabel2 = new javax.swing.JLabel();
+        textField = new javax.swing.JTextField();
+        textField2 = new javax.swing.JTextField();
+        JLabel jLabel3 = new javax.swing.JLabel();
+        button = new javax.swing.JButton();
         button.addActionListener(this);
 
-        JLabel minutesLabel = new JLabel("How many minutes has the lasagna been in the oven");
-        textField = new JTextField();
-        textField.setPreferredSize(new Dimension(100,40));
-        JLabel layerLabel = new JLabel("How many layers are in the lasagna");
-        textField2 = new JTextField();
-        textField2.setPreferredSize((new Dimension(100,40)));
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jLabel1.setText("How many minutes has the lasagna been in the oven?");
 
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel2.setText("Joan's Yummy Lasagna");
 
+        textField.setText("Minutes");
+        textField2.setText("Layers");
+        jLabel3.setText("How many layers are in the lasagna?");
+        button.setText("Submit");
 
-        this.add(minutesLabel);
-        this.add(textField);
-        this.add(layerLabel);
-        this.add(textField2);
-        this.add(button);
-        this.pack();
-        this.setLocationRelativeTo(null);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addGap(32, 32, 32)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(textField, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(textField2, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addGap(0, 0, Short.MAX_VALUE)))
+                                .addContainerGap())
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addContainerGap(69, Short.MAX_VALUE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(56, 56, 56))
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                                .addComponent(button)
+                                                .addGap(160, 160, 160))))
+        );
+        layout.setVerticalGroup(
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addGap(30, 30, 30)
+                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(textField, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(textField2, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(button)
+                                .addContainerGap(16, Short.MAX_VALUE))
+        );
+
+        pack();
+        this.setTitle("Joan's Yummy Lasagna");
         this.setVisible(true);
+
     }
 
 
